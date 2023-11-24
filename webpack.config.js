@@ -14,6 +14,10 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.shuibuzhuo$/,
+        use: [path.resolve(__dirname, './loader/shuibuzhuo-loader.js')],
+      },
     ],
   },
 };
