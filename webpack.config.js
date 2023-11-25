@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const FooterPlugin = require('./plugin/FooterPlugin');
 
 module.exports = {
   mode: 'development',
@@ -20,4 +22,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.BannerPlugin({
+      banner: '学习前端工程化',
+    }),
+    new FooterPlugin({
+      banner: '页脚测试',
+    }),
+  ],
 };
