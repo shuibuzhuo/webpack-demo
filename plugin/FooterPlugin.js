@@ -2,7 +2,6 @@ const { ConcatSource } = require('webpack-sources');
 
 class FooterPlugin {
   constructor(options) {
-    console.log('FooterPlugin constructor options', options);
     this.options = options;
   }
 
