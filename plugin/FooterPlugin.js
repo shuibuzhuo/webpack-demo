@@ -9,6 +9,7 @@ class FooterPlugin {
     compiler.hooks.compilation.tap('FooterPlugin', (compilation) => {
       compilation.hooks.processAssets.tap('FooterPlugin', () => {
         for (const chunk of compilation.chunks) {
+          console.log('chunk', chunk);
           for (const file of chunk.files) {
             const comment = `/* ${this.options.banner} */`;
             compilation.updateAsset(

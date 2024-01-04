@@ -1,1 +1,1 @@
-console.log('hello 哈默');
+console.log('hello webpack');

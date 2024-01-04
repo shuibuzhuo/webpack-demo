@@ -12,19 +12,19 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.css$/,
+      //   use: ['style-loader', 'css-loader'],
+      // },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.shuibuzhuo$/,
+        test: /\.hamovue$/,
         use: [path.resolve(__dirname, './loader/shuibuzhuo-loader.js')],
       },
     ],
   },
   plugins: [
     new webpack.BannerPlugin({
-      banner: '学习前端工程化',
+      banner: 'BannerPlugin 测试',
     }),
     new FooterPlugin({
       banner: '页脚测试',
