@@ -1,5 +1,9 @@
 exports.default = function (content) {
-  console.log('loader3 执行', content);
+  const { resourcePath = '', resourceQuery = ''} = this
+  console.log('loader3 执行');
+  console.log('loader3 resourcePath', resourcePath);
+  console.log('loader3 resourceQuery', resourceQuery);
+  
   return content;
 };
 
